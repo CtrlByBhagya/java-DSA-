@@ -106,3 +106,84 @@ class Main {
 
 // print all divisors
 
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.print("enter a no");
+    int n=sc.nextInt();
+    
+    divisor(n);
+
+    }
+    public static void divisor(int n){
+        for(int i=1;i<=n;i++){
+            if(n%i==0){
+                System.out.print(i+" ");
+            }
+        }
+    }
+}
+
+// to tell if it's prime no. or not
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.print("enter a no");
+    int n=sc.nextInt();
+    
+    boolean result=primeNum(n);
+    System.out.print(result);
+
+    }
+    public static boolean primeNum(int n){
+        if(n <= 1) return false;
+
+        for(int i = 2; i * i <= n; i++){
+           if(n % i == 0){
+                return false;
+        }
+    }
+    return true;
+  }
+} 
+
+// to print hcf/gcd
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.print("enter a no");
+    int a=sc.nextInt();
+    int b=sc.nextInt();
+    
+    int result=gcd(a,b);
+    System.out.print(result);
+
+    }
+    public static int gcd(int a,int b){
+
+       while(a>0 && b>0){
+           if (a>b){
+              a=a%b;
+           }
+           else{
+               b=b%a;
+           }
+       }   
+       if(a==0){
+          return b;
+       }
+       else{
+           return a;
+       }
+    } 
+}
+        
+    
+    
+
+
