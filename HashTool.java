@@ -12,7 +12,7 @@ public class HashTool {
         }
         // printing result
         for(int key:map.keySet()){
-            System.out.println(key+" "+"appears"+ map.get(key)+" "+"times");
+            System.out.println(key+" appears "+ map.get(key) + " times");
         }
     }    
 }
